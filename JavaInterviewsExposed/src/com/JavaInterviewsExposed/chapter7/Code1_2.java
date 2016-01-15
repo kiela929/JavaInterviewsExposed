@@ -4,12 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
- * @author HyeJin
- * 
- * code1~2
- * FizzBuzz 알고리즘 예시 
- * 
+ * code 7-1~2
+ * (FizzBuzz 알고리즘 예시)
+ * @로직설명
  * 1에서 n까지의 숫지를 출력하되 
  * 3의 배수는 Fizz라는 문자열을 출력하고, 
  * 5의 배수는 Bizz라는 문자열을 출력하고, 
