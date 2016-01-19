@@ -1,6 +1,7 @@
 package com.JavaInterviewsExposed.chapter7;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -18,6 +19,19 @@ import java.util.List;
  */
 public class Code3_7 {
 	public static List<Integer> fibonacci(int n){
+		if(n<0){//n은 0보다 커야함
+			throw new IllegalArgumentException("n must not be less than zero");
+		}
+		if(n==0){ //n이 0일 경우 빈 리스트 반환
+			return new ArrayList<>();
+		}
+		if(n==1){//n이 1일경우 0만 가진 리스트 반환
+			return Arrays.asList(0);
+		}
+		if(n==2){//n이 2일경우 0,1 가진 리스트 반환
+			return Arrays.asList(0,1);
+		}
+		
 		
 		final List<Integer> seq= new ArrayList<>(n);
 		seq.add(0);
