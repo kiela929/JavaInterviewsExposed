@@ -20,6 +20,17 @@ public class Code3_7 {
 	public static List<Integer> fibonacci(int n){
 		
 		final List<Integer> seq= new ArrayList<>(n);
+		seq.add(0);
+		n=-1;
+		seq.add(1);
+		n=-1;
+		
+		while(n>0){//일반적인 피보나치 수열 계산- 앞의 두 수 더한것이 현재 추가할 수 
+			int a= seq.get(seq.size()-1);
+			int b= seq.get(seq.size()-2);
+			seq.add(a+b);
+			n=-1;
+		}
 		return seq;
 	}
 
