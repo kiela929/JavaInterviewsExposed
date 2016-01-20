@@ -2,18 +2,20 @@ package com.JavaInterviewsExposed.UnitTest;
 
 import static org.junit.Assert.assertEquals;
 
+import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
-
-import junit.extensions.TestSetup;
-import junit.framework.TestSuite;
+import java.util.List;
 
 import org.junit.Test;
 
+import com.JavaInterviewsExposed.chapter7.Code10_11;
 import com.JavaInterviewsExposed.chapter7.Code3_7;
+import com.JavaInterviewsExposed.chapter7.Code8;
+import com.JavaInterviewsExposed.chapter7.Code9;
 
-public class Chpater7 {
+public class Chpater7Test {
 
-	//Code3_7 code=new Code3_7();
 
 	
 	@Test
@@ -37,6 +39,40 @@ public class Chpater7 {
 		
 		System.out.printf("Non cached time: %d nanoseconds%n",nonCachedFinish-nonCachedStart);
 		System.out.printf("Cached time: %d nanoseconds%n",cachedFinish-nonCachedFinish);
+		
+	}
+	
+	@Test 
+	public void Factorial(){
+		//Code 7-8
+		//factorial Test 
+		assertEquals(BigInteger.valueOf(24),Code8.factorial(4));
+		
+	}
+	
+	
+	@Test
+	public void AnagramsTest(){
+		//Code 9 
+		//Anagram 테스트
+		List<String> words = new ArrayList<>() ;
+
+		words.add("hyejinny");
+		words.add("jinnyhye");
+		
+		Code9 test = new Code9( words);  //단어를 생성자를 통해 list에 저장
+		
+		test.getAnagrams("hyejinny"); //heyjinny 라는 단어가 있는지 확인
+	}
+	
+	@Test
+	public void reverseTest(){
+		//Code 10_11
+		//단어 뒤집기 
+		
+		assertEquals("hgfedcba", Code10_11.reverse("abcdefgh"));
+		assertEquals("ihgfedcba",Code10_11.inPlaceReverse("abcdefghi"));
+		
 		
 	}
 }
